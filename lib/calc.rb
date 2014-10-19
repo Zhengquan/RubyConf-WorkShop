@@ -3,19 +3,9 @@ module Calc
     operation_regexp = /(\+|-|\*|\/)/
     operation = operation_regexp.match(string)
 
-    result = 0
     if operation
       nums = string.split(operation[0])
-      case operation[0].to_sym
-        when :+
-          result = nums[0].to_i + nums[1].to_i
-        when :-
-          result = nums[0].to_i - nums[1].to_i
-        when :*
-          result = nums[0].to_i * nums[1].to_i
-        when :/
-          result = nums[0].to_i / nums[1].to_i
-      end
+      result = nums[0].to_i.send(operation[0].to_sym,nums[1].to_i)
     else
       result = string.to_i
     end
