@@ -12,9 +12,9 @@ describe 'calc' do
 
   it 'should eval two number with one operation' do
     assert('plus') { Calc.eval('1+1') == 2 }
-  #   assert('minus') {Calc.eval('1-1') == 0 }
-  #   assert('multiple') {Calc.eval('2*2') == 4 }
-  #   assert('divide') {Calc.eval('4/2') == 2 }
+    assert('minus') {Calc.eval('1-1') == 0 }
+    assert('multiple') {Calc.eval('2*2') == 4 }
+    assert('divide') {Calc.eval('4/2') == 2 }
   end
   #
   # it 'should eval three number with two operation' do
