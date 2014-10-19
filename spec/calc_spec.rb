@@ -7,7 +7,7 @@ describe 'calc' do
 
   it 'should eval one number' do
     assert('one digit') { Calc.eval('1') == 1 }
-    # assert('multiple digits') { Calc.eval('11') == 11 }
+    assert('multiple digits') { Calc.eval('11') == 11 }
   end
 
   # it 'should eval two number with one operation' do
