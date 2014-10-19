@@ -1,5 +1,5 @@
 module Calc
   def self.eval(string)
-    2
+    1
   end
 end
