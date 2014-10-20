@@ -5,6 +5,8 @@ module Calc
     result
   end
 
+  private
+
   def self.evaluate(nums, operations)
     result = nums.pop
     until operations.empty?

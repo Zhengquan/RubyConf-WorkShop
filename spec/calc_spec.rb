@@ -20,14 +20,5 @@ describe 'calc' do
   it 'should eval three or more numbers with two operation' do
     assert('without priority') { Calc.eval('1-1+1') == 1 }
     assert('without priority') { Calc.eval('1-1+1+3') == 4 }
-    # assert('with priority') { Calc.eval('2-1*2') == 0 }
-    # assert('with priority') { Calc.eval('2*1-2') == 0 }
   end
-  #
-  # it 'should eval brackets' do
-  #   assert('with one operation') { Calc.eval('(1-1)') == 0 }
-  #   assert('with two operation') { Calc.eval('(1-1+1)') == 1 }
-  #   assert('with priority') { Calc.eval('(2-1)*2') == 2 }
-  #   assert('with priority') { Calc.eval('2*(1-2)') == -2 }
-  # end
 end
