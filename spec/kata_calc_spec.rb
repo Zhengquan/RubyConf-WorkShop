@@ -30,9 +30,13 @@ describe KataCalc do
     end
 
     context "when input contains line break" do
-      it "should take linke break as add operator " do
+      it "should take linke break as plus operator " do
         result = kata.eval("1\n1+1")
         expect(result).to eq(3);
+      end
+
+      it "should throw exception if line break after plus operator" do
+        expect{ kata.eval("1+\n") }.to raise_error
       end
     end
   end
