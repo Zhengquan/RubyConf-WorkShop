@@ -1,3 +1,7 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
-gem 'rspec'
+group :test, :development do
+  gem 'rspec'
+  gem 'wrong'
+  gem 'dentaku'
+end
