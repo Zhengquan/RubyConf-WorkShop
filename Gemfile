@@ -5,3 +5,8 @@ group :test, :development do
   gem 'wrong'
   gem 'dentaku'
 end
+
+group :develpoment do
+  gem 'guard'
+  gem 'guard-rspec', require: false
+end
