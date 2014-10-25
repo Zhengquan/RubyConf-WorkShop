@@ -1,8 +1,11 @@
-require 'rspec'
+require 'kata_calc'
 
 describe 'KataCalc' do
 
-  it 'sample test' do
-    expect(true).to be true
+  let(:kata) { KataCalc.new }
+
+  it "should get zero if input is empty" do
+    result = kata.eval("")
+    expect(result).to eq(0);
   end
 end
