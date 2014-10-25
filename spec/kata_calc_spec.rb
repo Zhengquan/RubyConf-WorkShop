@@ -29,5 +29,11 @@ describe KataCalc do
       end
     end
 
+    context "when input contains line break" do
+      it "should take linke break as add operator " do
+        result = kata.eval("1\n1+1")
+        expect(result).to eq(3);
+      end
+    end
   end
 end
