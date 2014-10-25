@@ -1,21 +1,23 @@
 require 'kata_calc'
 
-describe 'KataCalc' do
+describe KataCalc do
 
   let(:kata) { KataCalc.new }
 
-  it "should get zero if input is empty" do
-    result = kata.eval("")
-    expect(result).to eq(0);
-  end
+  describe "#eval" do
+    it "should get zero if input is empty" do
+      result = kata.eval("")
+      expect(result).to eq(0);
+    end
 
-  it "should get same number if input only has one number" do
-    result = kata.eval("1")
-    expect(result).to eq(1);
-  end
+    it "should get same number if input only has one number" do
+      result = kata.eval("1")
+      expect(result).to eq(1);
+    end
 
-  it "should sum two number if input has two numbers" do
-    result = kata.eval("1+1")
-    expect(result).to eq(2);
+    it "should sum two number if input has two numbers" do
+      result = kata.eval("1+1")
+      expect(result).to eq(2);
+    end
   end
 end
