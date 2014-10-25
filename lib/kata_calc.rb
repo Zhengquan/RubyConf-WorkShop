@@ -1,6 +1,8 @@
 class KataCalc
 
   def eval(input)
-    input.to_i
+    return input.to_i if not input.include?('+')
+    left,right = input.split('+').map(&:to_i)
+    left + right
   end
 end

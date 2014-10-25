@@ -13,4 +13,9 @@ describe 'KataCalc' do
     result = kata.eval("1")
     expect(result).to eq(1);
   end
+
+  it "should sum two number if input has two numbers" do
+    result = kata.eval("1+1")
+    expect(result).to eq(2);
+  end
 end
