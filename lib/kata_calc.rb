@@ -1,11 +1,14 @@
 class KataCalc
+  DEFAULT_OPERATORS = ["\n", "+"]
   def eval(input)
     raise StandardError if input.end_with?("\n")
+    operators = DEFAULT_OPERATORS
     if input.include?("//")
-      number_expr = input.split("\n")[-1]
-      return number_expr.split(input[2]).map(&:to_i).reduce 0, :+
+      operators = input[2]
+      input = input.split("\n")[-1]
+    elsif not input.include?("+")
+      return input.to_i
     end
-    return input.to_i if not input.include?('+')
-    input.split(/[\n\+]/).map(&:to_i).reduce 0, :+
+    input.split(/#{operators}/).map(&:to_i).reduce 0, :+
   end
 end
