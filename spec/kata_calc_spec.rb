@@ -39,5 +39,12 @@ describe KataCalc do
         expect{ kata.eval("1+\n") }.to raise_error
       end
     end
+
+    context "when custom plus operator" do
+      it "should take @ as plus operator" do
+        result = kata.eval("//@\n1@2")
+        expect(result).to eq(3);
+      end
+    end
   end
 end
