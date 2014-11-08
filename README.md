@@ -1,4 +1,4 @@
-RubyConf-WorkShop
+Seed Project
 =================
 
-Repository for workshop of Ruby China Conference 2014
+Ruby Seed Project
